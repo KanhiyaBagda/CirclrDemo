@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "55739A0D-71C0-45DC-82D4-C9BDFAB260CD"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0221B017-FBB7-43A9-8BF5-F6675EACC87B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CircleDemo/MVVM/ViewModel/CircleViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "loadDataFromDataSource()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3199F865-9012-41C1-9DEC-0023A105F1C2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CircleDemo/MVVM/View/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "getData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5ADB1229-D3F2-4BBD-8985-76785E61535D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CircleDemo/MVVM/ViewModel/CircleViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "loadDataFromDataSource()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5ADB1229-D3F2-4BBD-8985-76785E61535D - 57a05ef05e945c2d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CircleDemo.CircleListModel) -&gt; () in CircleDemo.CircleViewModel.loadDataFromDataSource() -&gt; ()"
+                  moduleName = "CircleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/WorkStation/MachineRound/WeatherForecastDemoApp/CircleDemo/CircleDemo/MVVM/ViewModel/CircleViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "371">
+               </Location>
+               <Location
+                  uuid = "5ADB1229-D3F2-4BBD-8985-76785E61535D - 57a05ef05e945c2d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CircleDemo.CircleListModel) -&gt; () in CircleDemo.CircleViewModel.loadDataFromDataSource() -&gt; ()"
+                  moduleName = "CircleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/WorkStation/MachineRound/WeatherForecastDemoApp/CircleDemo/CircleDemo/MVVM/ViewModel/CircleViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "422">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
