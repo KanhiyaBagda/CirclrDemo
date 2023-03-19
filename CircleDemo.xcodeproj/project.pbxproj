@@ -16,6 +16,9 @@
 		0419CBB529C6342B00D1AE27 /* MemberListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0419CBB429C6342B00D1AE27 /* MemberListVC.swift */; };
 		0456030829C6431B002D74B6 /* DeviceCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456030629C6431B002D74B6 /* DeviceCustomCell.swift */; };
 		0456030929C6431B002D74B6 /* DeviceCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0456030729C6431B002D74B6 /* DeviceCustomCell.xib */; };
+		04D5817029C71C3A004B41F5 /* CircleMemberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5816F29C71C3A004B41F5 /* CircleMemberModel.swift */; };
+		04D5817229C71E64004B41F5 /* CirclrMemberListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5817129C71E64004B41F5 /* CirclrMemberListViewModel.swift */; };
+		04D5817529C72C9A004B41F5 /* downloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5817429C72C9A004B41F5 /* downloadImage.swift */; };
 		04E997B029C080670010B059 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E997AF29C080670010B059 /* AppDelegate.swift */; };
 		04E997B229C080670010B059 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E997B129C080670010B059 /* SceneDelegate.swift */; };
 		04E997B429C080670010B059 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E997B329C080670010B059 /* ViewController.swift */; };
@@ -35,6 +38,9 @@
 		0419CBB429C6342B00D1AE27 /* MemberListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListVC.swift; sourceTree = "<group>"; };
 		0456030629C6431B002D74B6 /* DeviceCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCustomCell.swift; sourceTree = "<group>"; };
 		0456030729C6431B002D74B6 /* DeviceCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceCustomCell.xib; sourceTree = "<group>"; };
+		04D5816F29C71C3A004B41F5 /* CircleMemberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleMemberModel.swift; sourceTree = "<group>"; };
+		04D5817129C71E64004B41F5 /* CirclrMemberListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclrMemberListViewModel.swift; sourceTree = "<group>"; };
+		04D5817429C72C9A004B41F5 /* downloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = downloadImage.swift; sourceTree = "<group>"; };
 		04E997AC29C080670010B059 /* CircleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E997AF29C080670010B059 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04E997B129C080670010B059 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,8 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				0419CBB329C6194F00D1AE27 /* Model */,
-				0419CBB229C6194C00D1AE27 /* View */,
 				0419CBB029C6194200D1AE27 /* ViewModel */,
+				0419CBB229C6194C00D1AE27 /* View */,
 			);
 			path = CircleMember;
 			sourceTree = "<group>";
@@ -75,6 +81,7 @@
 			children = (
 				04E997C529C0809B0010B059 /* Model */,
 				04E997C729C080B20010B059 /* View */,
+				04E997C629C080A50010B059 /* ViewModel */,
 			);
 			path = "CircleList ";
 			sourceTree = "<group>";
@@ -82,6 +89,7 @@
 		0419CBB029C6194200D1AE27 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				04D5817129C71E64004B41F5 /* CirclrMemberListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -100,8 +108,17 @@
 		0419CBB329C6194F00D1AE27 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04D5816F29C71C3A004B41F5 /* CircleMemberModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		04D5817329C72C70004B41F5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				04D5817429C72C9A004B41F5 /* downloadImage.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		04E997A329C080670010B059 = {
@@ -128,6 +145,7 @@
 				04E997AF29C080670010B059 /* AppDelegate.swift */,
 				04E997B129C080670010B059 /* SceneDelegate.swift */,
 				04E997C429C0808E0010B059 /* Network */,
+				04D5817329C72C70004B41F5 /* Extension */,
 				04E997C329C080760010B059 /* MVVM */,
 				04E997B529C080670010B059 /* Main.storyboard */,
 				04E997B829C080690010B059 /* Assets.xcassets */,
@@ -141,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				0419CBAF29C618E700D1AE27 /* CircleList  */,
-				04E997C629C080A50010B059 /* ViewModel */,
 				0419CBAE29C618E400D1AE27 /* CircleMember */,
 			);
 			path = MVVM;
@@ -319,10 +336,13 @@
 				0419CBA829C337C300D1AE27 /* CircleViewModel.swift in Sources */,
 				04E997B429C080670010B059 /* ViewController.swift in Sources */,
 				0419CBB529C6342B00D1AE27 /* MemberListVC.swift in Sources */,
+				04D5817229C71E64004B41F5 /* CirclrMemberListViewModel.swift in Sources */,
 				0456030829C6431B002D74B6 /* DeviceCustomCell.swift in Sources */,
+				04D5817529C72C9A004B41F5 /* downloadImage.swift in Sources */,
 				04E997B029C080670010B059 /* AppDelegate.swift in Sources */,
 				0419CBA029C096A200D1AE27 /* HttpClient.swift in Sources */,
 				04E997B229C080670010B059 /* SceneDelegate.swift in Sources */,
+				04D5817029C71C3A004B41F5 /* CircleMemberModel.swift in Sources */,
 				0419CBA629C2E7F900D1AE27 /* CircleListModel.swift in Sources */,
 				0419CBAD29C484AF00D1AE27 /* MapViewVC.swift in Sources */,
 			);
@@ -472,6 +492,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R2WVA3627B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CircleDemo/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Show User Location";
@@ -480,12 +501,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = KBInfotectSolution.CircleDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobileforce.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -501,6 +523,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R2WVA3627B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CircleDemo/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Show User Location";
@@ -509,12 +532,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = KBInfotectSolution.CircleDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobileforce.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

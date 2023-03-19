@@ -35,4 +35,16 @@ class HttpClient: NSObject {
             print("decode error")
         }
     }
+    
+    //Parse -Jsondata
+    func parseCircleMember(jsonData: Data,completion :@escaping(CircleMemberModel) -> Void) {
+        do {
+            let decodedData = try JSONDecoder().decode(CircleMemberModel.self,
+                                                       from: jsonData)
+            
+            completion(decodedData)
+        } catch {
+            print("decode error")
+        }
+    }
 }

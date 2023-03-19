@@ -420,9 +420,9 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDK-WB-edA">
-                                <rect key="frame" x="50" y="768" width="293" height="50"/>
+                                <rect key="frame" x="70" y="778" width="253" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="t0V-Vk-1nu"/>
+                                    <constraint firstAttribute="height" constant="40" id="t0V-Vk-1nu"/>
                                 </constraints>
                                 <buttonConfiguration key="configuration" style="filled" title="Show Device List"/>
                                 <connections>
@@ -437,8 +437,8 @@
                             <constraint firstItem="7eS-Pj-0Ar" firstAttribute="trailing" secondItem="P3e-de-IvB" secondAttribute="trailing" id="Cqo-R9-20a"/>
                             <constraint firstItem="P3e-de-IvB" firstAttribute="top" secondItem="7eS-Pj-0Ar" secondAttribute="top" id="P7P-O9-w16"/>
                             <constraint firstItem="7eS-Pj-0Ar" firstAttribute="bottom" secondItem="P3e-de-IvB" secondAttribute="bottom" id="W9A-Tc-fIL"/>
-                            <constraint firstItem="sDK-WB-edA" firstAttribute="leading" secondItem="7eS-Pj-0Ar" secondAttribute="leading" constant="50" id="fgv-3m-PYd"/>
-                            <constraint firstItem="7eS-Pj-0Ar" firstAttribute="trailing" secondItem="sDK-WB-edA" secondAttribute="trailing" constant="50" id="gpQ-hU-FJf"/>
+                            <constraint firstItem="sDK-WB-edA" firstAttribute="leading" secondItem="7eS-Pj-0Ar" secondAttribute="leading" constant="70" id="fgv-3m-PYd"/>
+                            <constraint firstItem="7eS-Pj-0Ar" firstAttribute="trailing" secondItem="sDK-WB-edA" secondAttribute="trailing" constant="70" id="gpQ-hU-FJf"/>
                             <constraint firstItem="P3e-de-IvB" firstAttribute="leading" secondItem="7eS-Pj-0Ar" secondAttribute="leading" id="s1c-w7-3BB"/>
                         </constraints>
                     </view>

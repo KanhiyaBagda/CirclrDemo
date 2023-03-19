@@ -8,6 +8,7 @@ import Foundation
 
 // MARK: - Welcome
 struct CircleListModel: Codable {
+    
     let result : Result?
     let circleCount : Int?
     let circleList : [CircleList]?
@@ -15,7 +16,6 @@ struct CircleListModel: Codable {
     let deviceListList : [String]?
     
     enum CodingKeys: String, CodingKey {
-        
         case result = "result"
         case circleCount = "CircleCount"
         case circleList = "CircleList"
@@ -31,7 +31,6 @@ struct CircleListModel: Codable {
         bleTagList = try values.decodeIfPresent([BleTagList].self, forKey: .bleTagList)
         deviceListList = try values.decodeIfPresent([String].self, forKey: .deviceListList)
     }
-    
 }
 
 // MARK: - BleTagList

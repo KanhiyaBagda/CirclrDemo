@@ -8,31 +8,27 @@
 import UIKit
 import GoogleMaps
 
-class MapViewVC: UIViewController, UIGestureRecognizerDelegate {
+class MapViewVC: UIViewController {
     
     @IBOutlet weak var mapView: GMSMapView!
-    @IBOutlet weak var customView: UIView!
-    @IBOutlet weak var heightConstraint : NSLayoutConstraint!
-    var locationManager = CLLocationManager()
-    
+    var viewModel : CirclrMemberListViewModel? = nil
     var circleId : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = CirclrMemberListViewModel(delegate: self)
+        viewModel?.loadDataFromDataSource()
         setupMapViewConfig()
     }
     
-    
     func setupMapViewConfig(){
         //GoogleMaps
-        mapView.delegate = self
         mapView.settings.myLocationButton = true
         mapView.isMyLocationEnabled = true
         
-        //Location Manager code to fetch current location
-        self.locationManager.delegate = self
-        self.locationManager.startUpdatingLocation()
+
     }
+
     //IBAction
     @IBAction func displayDeviceList(_sender: UIButton){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -40,25 +36,37 @@ class MapViewVC: UIViewController, UIGestureRecognizerDelegate {
         self.navigationController?.present(memberListVC, animated: true)
     }
 }
-extension MapViewVC: CLLocationManagerDelegate {
-    //Location Manager delegates
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations.last
-        let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: 17.0)
-        self.mapView?.animate(to: camera)
-        self.locationManager.stopUpdatingLocation()
+
+extension MapViewVC: CirclrMemberViewModelEvents{
+    func getMemberListData() {
+        
+        let userDataArr = viewModel?.model?.userDetail
+        if userDataArr?.count ?? 0 > 0{
+            var bounds = GMSCoordinateBounds()
+            for data in userDataArr! {
+                let iconView = UIImageView.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+                iconView.downloaded(from: data.profilePic!)
+                
+                // Creates a marker in the center of the map.
+                let marker = GMSMarker()
+                let latitude = Double(data.lat ?? "")
+                let longitude = Double (data.long  ?? "")
+                marker.position = CLLocationCoordinate2D(latitude: latitude ?? 0.0, longitude: longitude ?? 0.0)
+                marker.iconView = iconView
+                marker.tracksViewChanges = true
+                marker.map = mapView
+                bounds = bounds.includingCoordinate(marker.position)
+                
+                UIView.animate(withDuration: 0.7,
+                               animations: {
+                    marker.iconView?.frame = CGRect(x: 0, y: 0, width: 29.0, height: 34.0)
+                }, completion: nil)
+            }
+            mapView.setMinZoom(1, maxZoom: 15)
+            let update = GMSCameraUpdate.fit(bounds, withPadding: 50)
+            mapView.animate(with: update)
+            mapView.setMinZoom(1, maxZoom: 20)
+        }
     }
 }
 
-extension MapViewVC : GMSMapViewDelegate{
-    //MARK - GMSMarker Dragging
-    func mapView(_ mapView: GMSMapView, didBeginDragging marker: GMSMarker) {
-        print("didBeginDragging")
-    }
-    func mapView(_ mapView: GMSMapView, didDrag marker: GMSMarker) {
-        print("didDrag")
-    }
-    func mapView(_ mapView: GMSMapView, didEndDragging marker: GMSMarker) {
-        print("didEndDragging")
-    }
-}
