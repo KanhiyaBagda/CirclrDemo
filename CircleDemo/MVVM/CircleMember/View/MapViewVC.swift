@@ -9,8 +9,8 @@ import UIKit
 import GoogleMaps
 
 class MapViewVC: UIViewController {
-    
     @IBOutlet weak var mapView: GMSMapView!
+    
     var viewModel : CirclrMemberListViewModel? = nil
     var circleId : Int?
     
@@ -20,26 +20,21 @@ class MapViewVC: UIViewController {
         viewModel?.loadDataFromDataSource()
         setupMapViewConfig()
     }
-    
     func setupMapViewConfig(){
         //GoogleMaps
         mapView.settings.myLocationButton = true
         mapView.isMyLocationEnabled = true
-        
-
     }
-
     //IBAction
     @IBAction func displayDeviceList(_sender: UIButton){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let memberListVC:MemberListVC = storyboard.instantiateViewController(withIdentifier: "MemberListVC") as! MemberListVC
+        memberListVC.modelData = viewModel?.model
         self.navigationController?.present(memberListVC, animated: true)
     }
 }
-
 extension MapViewVC: CirclrMemberViewModelEvents{
     func getMemberListData() {
-        
         let userDataArr = viewModel?.model?.userDetail
         if userDataArr?.count ?? 0 > 0{
             var bounds = GMSCoordinateBounds()

@@ -3,4 +3,54 @@
    uuid = "FB35C45A-6237-4710-B180-DDAA29794871"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B756133D-8D6B-4B4C-A3B2-658C8588C07C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CircleDemo/MVVM/CircleMember/View/DeviceCustomCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "setupCellData(dataModel:indexPath:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B756133D-8D6B-4B4C-A3B2-658C8588C07C - fee12c865f6d9a4d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CircleDemo.DeviceCustomCell.setupCellData(dataModel: CircleDemo.CircleMemberModel, indexPath: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "CircleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/WorkStation/MachineRound/IOS%20TASK/CircleDemo/CirclrDemo/CircleDemo/MVVM/CircleMember/View/DeviceCustomCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "8575">
+               </Location>
+               <Location
+                  uuid = "B756133D-8D6B-4B4C-A3B2-658C8588C07C - fee12c865f6d9a4d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CircleDemo.DeviceCustomCell.setupCellData(dataModel: CircleDemo.CircleMemberModel, indexPath: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "CircleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/WorkStation/MachineRound/IOS%20TASK/CircleDemo/CirclrDemo/CircleDemo/MVVM/CircleMember/View/DeviceCustomCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "8649">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
