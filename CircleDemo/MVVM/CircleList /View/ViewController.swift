@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var circle5: UIView!
     @IBOutlet weak var circle6: UIView!
     @IBOutlet weak var circle7: UIView!
+    
     @IBOutlet weak var circle1ActiveStatusLbl: UILabel!
     @IBOutlet weak var circle1NameLbl: UILabel!
     @IBOutlet weak var circle2ActiveStatusLbl: UILabel!
@@ -39,6 +40,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         viewModel = CircleViewModel(delegate: self)
         viewModel?.loadDataFromDataSource()
+        setupCircleView()
     }
     
     override func viewDidLayoutSubviews() {
@@ -52,34 +54,13 @@ class ViewController: UIViewController {
         circle6.layer.cornerRadius = circle6.frame.size.width/2
         circle7.layer.cornerRadius = circle7.frame.size.width/2
     }
+    func setupCircleView(){
+
+    }
     
     @IBAction func circleLocationOnMap(_sender: UIButton){
-        
-        var circleId = 0
-        switch _sender.tag {
-    
-        case 1:
-            circleId = circleList?[0].circleId ?? 0
-        case 2:
-            circleId = circleList?[1].circleId ?? 0
-        case 3:
-            circleId = circleList?[2].circleId ?? 0
-        case 4:
-            circleId = circleList?[3].circleId ?? 0
-        case 5:
-            circleId = circleList?[4].circleId ?? 0
-        case 6:
-            circleId = circleList?[5].circleId ?? 0
-        case 7:
-            circleId = circleList?[6].circleId ?? 0
-            
-        default:
-            circleId = 0
-        }
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let mapVC:MapViewVC = storyboard.instantiateViewController(withIdentifier: "MapViewVC") as! MapViewVC
-        mapVC.circleId = circleId
         self.navigationController?.pushViewController(mapVC, animated: true)
     }
 }

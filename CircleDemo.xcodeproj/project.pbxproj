@@ -14,6 +14,7 @@
 		0419CBA829C337C300D1AE27 /* CircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0419CBA729C337C300D1AE27 /* CircleViewModel.swift */; };
 		0419CBAD29C484AF00D1AE27 /* MapViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0419CBAC29C484AF00D1AE27 /* MapViewVC.swift */; };
 		0419CBB529C6342B00D1AE27 /* MemberListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0419CBB429C6342B00D1AE27 /* MemberListVC.swift */; };
+		04299E4429C98DCB00A0CA99 /* DrawCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04299E4329C98DCB00A0CA99 /* DrawCircles.swift */; };
 		0456030829C6431B002D74B6 /* DeviceCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456030629C6431B002D74B6 /* DeviceCustomCell.swift */; };
 		0456030929C6431B002D74B6 /* DeviceCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0456030729C6431B002D74B6 /* DeviceCustomCell.xib */; };
 		04D5817029C71C3A004B41F5 /* CircleMemberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5816F29C71C3A004B41F5 /* CircleMemberModel.swift */; };
@@ -36,6 +37,7 @@
 		0419CBA729C337C300D1AE27 /* CircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewModel.swift; sourceTree = "<group>"; };
 		0419CBAC29C484AF00D1AE27 /* MapViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewVC.swift; sourceTree = "<group>"; };
 		0419CBB429C6342B00D1AE27 /* MemberListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListVC.swift; sourceTree = "<group>"; };
+		04299E4329C98DCB00A0CA99 /* DrawCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawCircles.swift; sourceTree = "<group>"; };
 		0456030629C6431B002D74B6 /* DeviceCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCustomCell.swift; sourceTree = "<group>"; };
 		0456030729C6431B002D74B6 /* DeviceCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceCustomCell.xib; sourceTree = "<group>"; };
 		04D5816F29C71C3A004B41F5 /* CircleMemberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleMemberModel.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				04E997B329C080670010B059 /* ViewController.swift */,
+				04299E4329C98DCB00A0CA99 /* DrawCircles.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				04D5817529C72C9A004B41F5 /* downloadImage.swift in Sources */,
 				04E997B029C080670010B059 /* AppDelegate.swift in Sources */,
 				0419CBA029C096A200D1AE27 /* HttpClient.swift in Sources */,
+				04299E4429C98DCB00A0CA99 /* DrawCircles.swift in Sources */,
 				04E997B229C080670010B059 /* SceneDelegate.swift in Sources */,
 				04D5817029C71C3A004B41F5 /* CircleMemberModel.swift in Sources */,
 				0419CBA629C2E7F900D1AE27 /* CircleListModel.swift in Sources */,

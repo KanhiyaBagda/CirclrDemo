@@ -12,8 +12,7 @@ class MapViewVC: UIViewController {
     @IBOutlet weak var mapView: GMSMapView!
     
     var viewModel : CirclrMemberListViewModel? = nil
-    var circleId : Int?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = CirclrMemberListViewModel(delegate: self)
@@ -25,12 +24,20 @@ class MapViewVC: UIViewController {
         mapView.settings.myLocationButton = true
         mapView.isMyLocationEnabled = true
     }
-    //IBAction
-    @IBAction func displayDeviceList(_sender: UIButton){
+   
+    func displayDeviceList(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let memberListVC:MemberListVC = storyboard.instantiateViewController(withIdentifier: "MemberListVC") as! MemberListVC
         memberListVC.modelData = viewModel?.model
-        self.navigationController?.present(memberListVC, animated: true)
+        
+        if let sheet = memberListVC.sheetPresentationController {
+            sheet.detents = [ .medium(), .large() ]
+            sheet.prefersGrabberVisible = true
+            sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            sheet.preferredCornerRadius = 30.0
+        }
+        present(memberListVC, animated: true)
+        
     }
 }
 extension MapViewVC: CirclrMemberViewModelEvents{
@@ -61,7 +68,10 @@ extension MapViewVC: CirclrMemberViewModelEvents{
             let update = GMSCameraUpdate.fit(bounds, withPadding: 50)
             mapView.animate(with: update)
             mapView.setMinZoom(1, maxZoom: 20)
+            
+            self.displayDeviceList()
         }
+       
     }
 }
 
